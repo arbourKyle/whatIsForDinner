@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+}
+
+:root {
+    --backgroundColor: rgb(39,38,60);
+    --fontMain: #faebd7;
+    --fontSecond: rgb(32, 25, 25);
+}
+
+body {
+    position: relative;
+    background: var(--backgroundColor);
+}
+
+main {
+}
+
+h1  {
+    position: fixed;
+    top: 10%;
+    left: 28%;
+    color: var(--fontMain);
+
+}
+
+.firstPage {
+    position: fixed;
+    top: 50%;
+    left: 30%;
+    width: 40%;
+    text-align: center;
+    color: var(--fontMain);
+    
+}
+
+.firstPage > * {
+    border-radius: 12px;
+}
+
+#vegan {
+    
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    width: 40%;
+    height: 5rem;
+}
+
+#meat {
+    position: fixed;
+    top: 40%;
+    left: 30%;
+    width: 40%;
+    height: 5rem;
+}
+
+#custom {
+    position: fixed;
+    top: 50%;
+    left: 30%;
+    width: 40%;
+    height: 5rem;
+}
+
+/* second modal pop up */
+
+.vegetables {
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    text-align: center;
+    background-color: var(--backgroundColor);
+    color: var(--fontMain);
+    
+}
