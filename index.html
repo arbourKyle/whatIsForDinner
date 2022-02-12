@@ -11,14 +11,29 @@
 </head>
 <body>
     <h1 id="title"> <strong> What's for Dinner</strong></h1>
-
-<div class="firstPage">
-    <span id="vegan" class="d-block p-2 bg-primary text-white">VEGAN</span>
-    <span id="meat" class="d-block p-2 bg-success text-white">MEAT</span>
-    <span id="custom" class="d-block p-2 bg-dark text-white">CUSTOM</span>
+<!-- first page -->
+<div id="firstPage">
+    <span id="rice" class="d-block p-2 bg-primary text-white">RICE</span>
+    <span id="pasta" class="d-block p-2 bg-success text-white">PASTA</span>
+    <span id="potato" class="d-block p-2 bg-dark text-white">POTATO</span>
 </div>
 
+<!-- second page -->
+<div hidden id="dishBase">
+    <span id="rice" class="d-block p-2 bg-danger text-white">RICE</span>
+    <span id="pasta" class="d-block p-2 bg-warning text-white">PASTA</span>
+    <span id="potato" class="d-block p-2 bg-info text-white">POTATO</span>
+</div>
 
+<!-- third page -->
+
+<div hidden id="vegetables">
+    <input id="vegetable" class="form-control form-control-lg" type="text" placeholder="1st vegetable..." aria-label=".form-control-lg example">
+    <br>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button id="submitBtn" class="btn btn-secondary" type="submit">Next<span id="numberVeg"></span> /3</button>
+    </div>
+</div>
 
 <!-- <div hidden id="vegetables">
     <select class="form-select" size="30" aria-label="size 10 select example">
@@ -56,7 +71,7 @@
 </div> -->
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
+
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="./assets/script.js"></script>
 </html>

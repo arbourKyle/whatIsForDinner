@@ -24,7 +24,7 @@ h1  {
 
 }
 
-.firstPage {
+#firstPage {
     position: fixed;
     top: 50%;
     left: 30%;
@@ -34,11 +34,11 @@ h1  {
     
 }
 
-.firstPage > * {
+#firstPage > * {
     border-radius: 12px;
 }
 
-#vegan {
+#rice {
     
     position: fixed;
     top: 30%;
@@ -47,17 +47,17 @@ h1  {
     height: 5rem;
 }
 
-#meat {
+#pasta {
     position: fixed;
-    top: 40%;
+    top: 45%;
     left: 30%;
     width: 40%;
     height: 5rem;
 }
 
-#custom {
+#potato {
     position: fixed;
-    top: 50%;
+    top: 60%;
     left: 30%;
     width: 40%;
     height: 5rem;
@@ -65,7 +65,18 @@ h1  {
 
 /* second modal pop up */
 
-.vegetables {
+#vegetables {
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    text-align: center;
+    background-color: var(--backgroundColor);
+    color: var(--fontMain);
+    
+}
+
+#dishBase {
     position: fixed;
     top: 20%;
     left: 30%;
