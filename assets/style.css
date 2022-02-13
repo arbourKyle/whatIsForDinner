@@ -63,6 +63,16 @@ h1  {
     height: 5rem;
 }
 
+#random {
+    position: fixed;
+    top: 75%;
+    left: 30%;
+    width: 40%;
+    height: 5rem;
+    color: bisque;
+    border-radius: 12px;
+}
+
 /* second modal pop up */
 
 #vegetables {
@@ -76,18 +86,9 @@ h1  {
     
 }
 
-#dishBase {
-    position: fixed;
-    top: 20%;
-    left: 30%;
-    width: 40%;
-    text-align: center;
-    background-color: var(--backgroundColor);
-    color: var(--fontMain);
-    
-}
-
-#proteinOption {
+#proteinOption,
+#protein
+{
     background-color: rgb(205, 81, 50);
     position: fixed;
     top: 50%;

@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+}
+:root {
+    --backgroundColor: rgb(39,38,60);
+    --fontMain: #faebd7;
+    --fontSecond: rgb(32, 25, 25);
+}
+
+body {
+    background-color: var(--backgroundColor);
+    margin-top: 1rem;
+}
+
+#img {
+    
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+
+#ingredients {
+    
+    color: antiquewhite;
+    margin-left: 2rem;
+}
+
+#instructions {
+    color: antiquewhite;
+    
+        
+}
