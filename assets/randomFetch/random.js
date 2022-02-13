@@ -14,7 +14,7 @@ window.onload = ()=> {
     randomSelection();
 };
 
-function randomSelection() {
+/* function randomSelection() {
     fetch('https://api.spoonacular.com/recipes/random?apiKey='+key)
       .then(function(response) { return response.json() }) 
       .then(function(data) {
@@ -27,7 +27,7 @@ function randomSelection() {
     })
     .catch(function() {
     })
-    }
+    } */
 
 //add an image
 function addImage(data) {
