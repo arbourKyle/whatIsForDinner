@@ -9,6 +9,7 @@ let title = document.getElementById('title');
 
 window.onload = ()=> {
     formatIng();
+    ingSelection()
 };
 
 
@@ -40,7 +41,7 @@ function formatIng() {
     
     let p = protStrT.replace('"', '');
     protStr = p.replace('"', '');
-    console.log(protStr)
+    // console.log(protStr)
     sessionStorage.setItem('prot', protStr)
 
 //extract individual words
@@ -57,31 +58,41 @@ function formatIng() {
     let zz = vegStrTT[2].toString();
     let zzz = zz.replace('"', '');
     z = zzz.replace('"', '');
-    console.log(x, y, z);
+    // console.log(x, y, z);
     sessionStorage.setItem('x', x)
     sessionStorage.setItem('y', y)
     sessionStorage.setItem('z', z)
    
-    ingSelection();
+   
    
 }
+
 var protStr = sessionStorage.getItem('prot');
 var x =sessionStorage.getItem('x');
 var y = sessionStorage.getItem('y');
 var z = sessionStorage.getItem('z');
-console.log(protStr,x,y,z)
 
 function ingSelection() {
-    fetch('https://api.spoonacular.com/recipes/findByIngredients?ingredients='+protStr+x+y+z+'&number=2&apiKey='+key)
-      .then(function(response) { return response.json() }) 
-      .then(function(data) {
-        console.log(data)
+    console.log(protStr,x,y,z)
+    fetch('https://api.spoonacular.com/food/ingredients/search?query='+protStr+x+y+z+'&apiKey='+key)
+        .then(function(response) { return response.json() }) 
+        .then(function(data) {
+        //console.log(data)
         //console.log(data.recipes[0].image)
         //console.log(data.recipes[0].analyzedInstructions[0].steps[0].ingredients)
         //title.innerHTML = data.recipes[0].title;
-        // addImage(data);
-       
+        addImage(data);
+        clear();
     })
-    .catch(function() {
+        .catch(function() {
     })
+}
+
+    function addImageIng(data) {
+        image.setAttribute('src', data[0].image);
+    }
+
+    function clear() {
+        setTimeout
+        sessionStorage.clear();
     }

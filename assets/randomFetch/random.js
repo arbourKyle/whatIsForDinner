@@ -1,4 +1,4 @@
-const key = '5d367e532fd44cd58ba1fcb5151c27d2'
+
 
 let title = document.getElementById('title');
 let image = document.getElementById('img');
@@ -14,7 +14,7 @@ window.onload = ()=> {
     randomSelection();
 };
 
-/* function randomSelection() {
+function randomSelection() {
     fetch('https://api.spoonacular.com/recipes/random?apiKey='+key)
       .then(function(response) { return response.json() }) 
       .then(function(data) {
@@ -27,7 +27,7 @@ window.onload = ()=> {
     })
     .catch(function() {
     })
-    } */
+    }
 
 //add an image
 function addImage(data) {
