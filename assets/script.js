@@ -1,4 +1,4 @@
-const key = '5d367e532fd44cd58ba1fcb5151c27d2'
+const key = 'a04798a405d74ad186bee304b4239d0d'
 
 let rice = document.getElementById('rice');
 let pasta = document.getElementById('pasta');

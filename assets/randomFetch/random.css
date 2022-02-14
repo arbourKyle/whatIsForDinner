@@ -18,14 +18,19 @@ body {
     background-origin: content-box;
 }
 
-#ingredients {
+#ingredients,
+#instructions,
+#pageTitleRandom
+
+{
     
     color: antiquewhite;
-    
 }
 
-#instructions {
-    color: antiquewhite;
-    
-        
+
+footer {
+    width: 100%;
+    height: 1rem;
+    background-color: blue;
+    margin-bottom: 1rem;
 }

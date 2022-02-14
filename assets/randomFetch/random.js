@@ -1,6 +1,7 @@
 
 
 let title = document.getElementById('title');
+let pageTitleRandom = document.getElementById('pageTitleRandom');
 let image = document.getElementById('img');
 let ulIngredients = document.getElementById('ingredients');
 let ulInstructions = document.getElementById('instructions');
@@ -21,7 +22,7 @@ function randomSelection() {
         //console.log(data)
         //console.log(data.recipes[0].image)
         //console.log(data.recipes[0].analyzedInstructions[0].steps[0].ingredients)
-        //title.innerHTML = data.recipes[0].title;
+        title.innerHTML = data.recipes[0].title;
         addImage(data);
        
     })
@@ -31,13 +32,17 @@ function randomSelection() {
 
 //add an image
 function addImage(data) {
+
+    pageTitleRandom.innerHTML = data.recipes[0].title;
+
+    console.log(data)
     image.setAttribute('src', data.recipes[0].image);
     // console.log(data.recipes[0].image);
 
     //a list of ingredients
     let theIngredients = data.recipes[0].extendedIngredients;
     theIngredients.forEach(element => {
-        let content = element.name;
+        let content = element.original+' '+element.name;
         let contentLi = document.createElement('li');
         contentLi.innerHTML = content;
         ulIngredients.appendChild(contentLi);
@@ -47,7 +52,7 @@ function addImage(data) {
     //cooking instructions
     let theSteps = data.recipes[0].analyzedInstructions[0].steps;
     theSteps.forEach(element => {
-        console.log(theSteps);
+        // console.log(theSteps);
         let xcontent = element.step;
         let xcontentLi = document.createElement('li');
         xcontentLi.innerHTML = xcontent;
