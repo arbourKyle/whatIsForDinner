@@ -23,7 +23,7 @@ This application provides you with recipes
 This product is under the The Unlicense.
 
 ## Installation
-Visit this webpage
+Visit this webpage https://arbourkyle.github.io/whatIsForDinner/
 
 ## Usage
 Follow the prompts
