@@ -18,8 +18,8 @@ main {
 
 h1  {
     position: fixed;
-    top: 10%;
-    left: 28%;
+    top: 3rem;
+    right: 35%;
     color: var(--fontMain);
 
 }
