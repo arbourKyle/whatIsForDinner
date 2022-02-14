@@ -18,6 +18,8 @@
 
 ## Description
 This application provides you with recipes
+![app1](https://user-images.githubusercontent.com/96347402/153793470-c44bc0d4-cb45-472b-ab7b-f0ed15a03d78.jpg)
+![app2](https://user-images.githubusercontent.com/96347402/153793468-b3995f9c-844a-4d52-80e1-a8e1a0353066.jpg)
 
 ## License
 This product is under the The Unlicense.
@@ -33,8 +35,7 @@ Feel free to fork this project and make changes for review
 
 ## Tests
 none
-![app1](https://user-images.githubusercontent.com/96347402/153793470-c44bc0d4-cb45-472b-ab7b-f0ed15a03d78.jpg)
-![app2](https://user-images.githubusercontent.com/96347402/153793468-b3995f9c-844a-4d52-80e1-a8e1a0353066.jpg)
+
 ## Questions
 https://github.com/arbourKyle 
 
