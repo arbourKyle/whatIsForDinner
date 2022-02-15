@@ -5,6 +5,11 @@ let vegIng = JSON.parse(sessionStorage.getItem('vegetable'));
 let proteinIng = JSON.parse(sessionStorage.getItem('protein'));
 
 let title = document.getElementById('title');
+let pageTitle = document.getElementById('pageTitle');
+
+
+let ingUl = document.getElementById('ingredients');
+let instructUl = document.getElementById('instructions');
 
 
 window.onload = ()=> {
@@ -12,7 +17,7 @@ window.onload = ()=> {
     ingSelection()
 };
 
-
+//removing unwanted characters from string and extracting individual words for fetch query
 function formatIng() {
     // console.log(baseIng)
     // console.log(vegIng)
@@ -72,27 +77,65 @@ var x =sessionStorage.getItem('x');
 var y = sessionStorage.getItem('y');
 var z = sessionStorage.getItem('z');
 
+
+// le fetch
 function ingSelection() {
-    console.log(protStr,x,y,z)
-    fetch('https://api.spoonacular.com/food/ingredients/search?query='+protStr+x+y+z+'&apiKey='+key)
+   
+    fetch('https://api.spoonacular.com/recipes/findByIngredients?ingredients='+protStr+',+'+x+',+'+y+',+'+z+'&apiKey='+key)
         .then(function(response) { return response.json() }) 
         .then(function(data) {
-        //console.log(data)
+        console.log(data[0])
+        title.innerHTML = data[0].title;
         //console.log(data.recipes[0].image)
         //console.log(data.recipes[0].analyzedInstructions[0].steps[0].ingredients)
         //title.innerHTML = data.recipes[0].title;
-        addImage(data);
+        addImageIng(data);
+        popList(data);
         clear();
     })
         .catch(function() {
     })
 }
 
-    function addImageIng(data) {
-        image.setAttribute('src', data[0].image);
+
+//add image card
+function addImageIng(data) {
+        console.log(data[0].image)
+        img.setAttribute('src', data[0].image);
     }
 
-    function clear() {
+
+//populate the page content
+function popList(data){
+    
+
+    //title
+    pageTitle.textContent = data[0].title;
+
+    //chosen ingredients
+    let chosenIngredients = data[0].usedIngredients;
+    chosenIngredients.forEach(element => {
+        let content = element.original+' '+element.name;
+        let contentLi = document.createElement('li');
+        contentLi.innerHTML = content;
+        ingUl.appendChild(contentLi);
+        // console.log(element.name);
+    });
+
+    //missing ingredients
+    let missingIngredients = data[0].missedIngredients;
+    missingIngredients.forEach(element => {
+        let content = element.original+' '+element.name;
+        let contentLi = document.createElement('li');
+        contentLi.innerHTML = content;
+        ingUl.appendChild(contentLi);
+        // console.log(element.name);
+
+        
+    });
+}
+
+function clear() {
         setTimeout
         sessionStorage.clear();
     }

@@ -16,12 +16,14 @@ body {
 main {
 }
 
-h1  {
+#firstTitle,
+#proteinHeader
+{
     position: fixed;
     top: 3rem;
-    right: 35%;
+    width: 100%;
+    right: 1%;
     color: var(--fontMain);
-
 }
 
 #firstPage {
@@ -99,5 +101,6 @@ h1  {
 
 #proteinOption h1 {
     top: 40%;
-    text-align: center;
+    
+    
 }
